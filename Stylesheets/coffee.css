@@ -1,0 +1,41 @@
+#itemList{
+    width: 80%;
+    padding: 1%;
+    margin: auto;
+    text-align: center;
+    margin-top: 1%;
+    font-weight: bold;
+    background: rgb(200,200,200);
+    border: 2px solid black;
+    overflow: hidden;
+}
+
+label{
+    float: left;
+    clear: left;
+    margin-left: 13%;
+}
+input{
+    background: orange;
+    border: 1px solid black;
+    float: right;
+    margin-right: 13%;
+}
+
+#basket{
+    background: rgb(190,190,190);
+    border: 2px solid black;
+    width: 80%;
+    margin: auto;
+    margin-top: 1%;
+    padding: 1%;
+    text-align: center;
+}
+
+.btns{
+    padding: 2% 5%;
+    margin-top: 1%;
+    background: cyan;
+    border: 3px solid rgb(60,60,60);
+    
+}

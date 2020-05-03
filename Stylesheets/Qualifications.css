@@ -1,0 +1,51 @@
+/*:root{
+    --main-bg-colour:  linear-gradient(rgb(255,165,0), rgb(255,100,0));
+    --wrapper-bg: linear-gradient(rgb(60,60,60), rgb(190,190,190));
+    --main-colour: rgb(60,60,60);
+    --global-text-colour: rgb(80,80,80);
+    --navy-blue: rgb(0,164,204)
+}*/
+
+table{
+    width: 80%;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    text-align: center;
+    table-layout: fixed;
+    background: rgb(240,248,255)
+}
+
+table, tr, th, td{
+    padding: 20px;
+    color: rgb(60,60,60);
+    border: 2px solid black;;
+    border-collapse: collapse;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial;
+}
+table td:hover{
+    background: linear-gradient(rgb(255,165,0), rgb(255,100,0));
+    transition: ease-in-out 0.5s;
+}
+.headings{
+    background: rgb(190,190,190);
+    text-transform: uppercase;
+}
+
+.table-title{
+    font-style: italic;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 1%;
+    padding: 20px;;
+    background: rgb(190,190,190);
+    border: 3px solid rgb(60,60,60);
+    /*border-radius: 30%;*/
+}
+.table-title:hover{
+    transition: ease-in 0.2s;
+    background: linear-gradient(rgb(255,165,0), rgb(255,100,0));
+}
