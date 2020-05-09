@@ -82,12 +82,11 @@ function AddToOrder(){
     else if(n.value==5){
         var drinkName = "Flat White";
         vc2 = true;
-    } else if
+    } 
     var x = document.getElementById("extras");
     if (x.value==0){
-        vc3 = false;
-    }
-    if (x.value == 1){
+        vc3 = false;   
+    } else if (x.value == 1){
         var xtraItem = "Extra Cream";
         var xtraPrice = i4;
         vc3 = true;
