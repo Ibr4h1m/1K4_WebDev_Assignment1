@@ -150,7 +150,36 @@ footer{
     
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 800px){
+    #checkbox{
+        display: block;
+    }
+    
+    header a{
+        display: none;
+        width: 100%;
+    }
+    
+    #toggle:checked + ul a{
+        display: block;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        background: orange;
+        color: rgb(60,60,60);
+        border: 2px solid black;
+    }
+    #toggle:checked + ul a:hover{
+        background: rgb(190,190,190);
+        color: cyan;
+    }
+    #toggle:checked + ul{
+        margin-right: 0;
+    }
+    #logo{
+        position: absolute;
+    }
+    
         #my-image{
         border: 5px solid cyan;
         width: 30%;
