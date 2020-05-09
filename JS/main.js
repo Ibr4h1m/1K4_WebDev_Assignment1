@@ -44,7 +44,7 @@ function AddToOrder(){
     if (s.value==0){
         vc1 = false;
     }
-    if (s.value == 1) {
+    else if (s.value == 1) {
         var cupSize = "Small";
         var cupPrice = i1;
         vc1 = true;
@@ -63,7 +63,7 @@ function AddToOrder(){
     if (n.value==0){
         vc2 = false;
     }
-    if (n.value==1){
+    else if (n.value==1){
         var drinkName = "Latte";
         vc2 = true;
     }
@@ -86,7 +86,8 @@ function AddToOrder(){
     var x = document.getElementById("extras");
     if (x.value==0){
         vc3 = false;   
-    } else if (x.value == 1){
+    }
+    else if (x.value == 1){
         var xtraItem = "Extra Cream";
         var xtraPrice = i4;
         vc3 = true;
@@ -103,7 +104,7 @@ function AddToOrder(){
     if (m.value==0){
         vc4 = false;
     }
-    if (m.value ==1){
+    else if (m.value ==1){
         var milkType = "Whole Milk";
         vc4 = true;
     } else if(m.value==2){
