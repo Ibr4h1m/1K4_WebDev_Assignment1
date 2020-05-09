@@ -100,29 +100,12 @@
                             </tr>
                         </table>
                 </div>
-                <!--
-                <div class="currentOrder">
-                    <h1 class="table-title">Place Order</h1>
-                    <p id="itemList">
-                        Enter the item number in the field <br>
-                        <label for="size">Drink Size</label>
-                        <input type="number" id="size" name="dSize">
-                        <br>
-                        <label for="name">Drink Name</label>
-                        <input type="number" id="name" name="dName">
-                        <br>
-                        <label for="extras">Extras:</label>
-                        <input type="number" id="extras" name="extraItems"><br>
-                        <button class="btns"  onclick="AddToOrder()">ADD TO BASKET!</button>
-                    </p>
-                </div>
-                -->
                 <div class="currentOrder">
                     <h1 class="table-title">Place Order</h1>
                     <p id="itemList">
                         <label for="size">Drink Size</label>
                         <select id="size" name="dSize">
-                            <option>Select</option>
+                            <option value="0">Select</option>
                             <option value="1">Small</option>
                             <option value="2">Medium</option>
                             <option value="3">Large</option>
@@ -130,7 +113,7 @@
                         <br>
                         <label for="size">Drink Name</label>
                         <select id="name" name="dname">
-                            <option>Select</option>
+                            <option value="0">Select</option>
                             <option value="1">Latte</option>
                             <option value="2">Cappucino</option>
                             <option value="3">Espresso</option>
@@ -140,14 +123,14 @@
                         <br>
                         <label for="extras">Extras:</label>
                         <select id="extras" name="extraItems">
-                            <option>Select</option>
+                            <option value="0">Select</option>
                             <option value="1">Extra Cream</option>
                             <option value="2">Extra Syrup</option>
                             <option value="3">None</option>
                         </select>
-                        <label for="mType">Milk Type:</label>
+                        <label>Milk Type:</label>
                         <select id="milkType">
-                            <option>Select</option>
+                            <option value="0">Select</option>
                             <option value="1">Whole</option>
                             <option value="2">Skimmed</option>
                             <option value="3">Semi-Skimmed</option>
@@ -167,7 +150,7 @@
                         
                     </div>
                     
-                    <p ID="itemList">
+                    <p ID="AllButtonz">
                         <button class="btns" onclick="PlaceOrder()">Place Order</button>
                         <button class="btns" onclick="SaveOrder()">Add to favourites</button>
                         <button class="btns" onclick="retrieveOrder()">Use FAVOURITE ORDER</button>
