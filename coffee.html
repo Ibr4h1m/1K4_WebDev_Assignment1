@@ -28,67 +28,79 @@
             <section class="section-1">
                 <div class="menu">
                     <div class="table-title">
-                        <h1>Coffee Menu</h1>
+                        <h1>Prices</h1>
                     </div>
                     <table>
                         <tr class="headings">
-                            <td>Number</td>
                             <td>Item</td>
-                            <td>Price</td>
+                            <td>S</td>
+                            <td>M</td>
+                            <td>L</td>
                         </tr>
                         <tr>
-                            <td>1</td>
-                            <td>Small drink</td>
+                            <td>Latte</td>
                             <td>£2.45</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Medium Drink</td>
                             <td>£2.65</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Large Drink</td>
                             <td>£2.85</td>
                         </tr>
                         <tr>
-                            <td>4</td>
+                            <td>Cappucino</td>
+                            <td>£2.45</td>
+                            <td>£2.65</td>
+                            <td>£2.85</td>
+                        </tr>
+                        <tr>
+                            <td>Espresso</td>
+                            <td>£2.45</td>
+                            <td>£2.65</td>
+                            <td>£2.85</td>
+                        </tr>
+                        <tr>
+                            <td>Americano</td>
+                            <td>£2.45</td>
+                            <td>£2.65</td>
+                            <td>£2.85</td>
+                        </tr>
+                        <tr>
+                            <td>Flat White</td>
+                            <td>£2.45</td>
+                            <td>£2.65</td>
+                            <td>£2.85</td>
+                        </tr>
+                    </table>
+                    <div class="table-title">
+                        <h1>Extras</h1>
+                    </div>
+                    <table>
+                        <tr>
                             <td>Extra Cream</td>
                             <td>£0.50</td>
                         </tr>
+                        
                         <tr>
-                            <td>5</td>
                             <td>Syrup</td>
                             <td>£0.25</td>
                         </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Latte</td>
-                            <td>Varies</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Cappucino</td>
-                            <td>Varies</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>Espresso</td>
-                            <td>Varies</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>Americano</td>
-                            <td>Varies</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>Flat White</td>
-                            <td>Varies</td>
-                        </tr>
                     </table>
+                    <div class="table-title">
+                        <h1>Milk Options</h1>
+                    </div>
+                        <table>
+                            <tr>
+                                <td>Whole</td>
+                                <td>Skimmed</td>
+                            </tr>
+                            <tr>
+                                <td>Semi-Skimmed</td>
+                                <td>Soya</td>
+                            </tr>
+                            <tr>
+                                <td>Coconut</td>
+                                <td>N/A</td>
+                            </tr>
+                        </table>
                 </div>
-                
+                <!--
                 <div class="currentOrder">
                     <h1 class="table-title">Place Order</h1>
                     <p id="itemList">
@@ -102,15 +114,64 @@
                         <label for="extras">Extras:</label>
                         <input type="number" id="extras" name="extraItems"><br>
                         <button class="btns"  onclick="AddToOrder()">ADD TO BASKET!</button>
-                        
                     </p>
                 </div>
+                -->
+                <div class="currentOrder">
+                    <h1 class="table-title">Place Order</h1>
+                    <p id="itemList">
+                        <label for="size">Drink Size</label>
+                        <select id="size" name="dSize">
+                            <option>Select</option>
+                            <option value="1">Small</option>
+                            <option value="2">Medium</option>
+                            <option value="3">Large</option>
+                        </select>
+                        <br>
+                        <label for="size">Drink Name</label>
+                        <select id="name" name="dname">
+                            <option>Select</option>
+                            <option value="1">Latte</option>
+                            <option value="2">Cappucino</option>
+                            <option value="3">Espresso</option>
+                            <option value="4">Americano</option>
+                            <option value="5">Flat White</option>
+                        </select>
+                        <br>
+                        <label for="extras">Extras:</label>
+                        <select id="extras" name="extraItems">
+                            <option>Select</option>
+                            <option value="1">Extra Cream</option>
+                            <option value="2">Extra Syrup</option>
+                            <option value="3">None</option>
+                        </select>
+                        <label for="mType">Milk Type:</label>
+                        <select id="milkType">
+                            <option>Select</option>
+                            <option value="1">Whole</option>
+                            <option value="2">Skimmed</option>
+                            <option value="3">Semi-Skimmed</option>
+                            <option value="4">Coconut</option>
+                            <option value="5">Soya</option>
+                        </select>
+                        <br>
+                        <br>
+                        <br>
+                       <button class="btns"  onclick="AddToOrder()">add to basket</button>
+                    </p>
+                </div>
+                
                 <div class="currentOrder">
                     <h1 class="table-title">Your Order</h1>
                     <div id="basket">
+                        
                     </div>
+                    
                     <p ID="itemList">
                         <button class="btns" onclick="PlaceOrder()">Place Order</button>
+                        <button class="btns" onclick="SaveOrder()">Add to favourites</button>
+                        <button class="btns" onclick="retrieveOrder()">Use FAVOURITE ORDER</button>
+                        <button class="btns" onclick="clearFav()">clear favourites</button>
                     </p>
                 </div>
                 
