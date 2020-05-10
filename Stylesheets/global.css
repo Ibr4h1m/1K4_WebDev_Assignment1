@@ -126,7 +126,7 @@ footer{
     transition: ease-in-out 0.3s
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 720px){
     #checkbox{
         display: block;
     }
