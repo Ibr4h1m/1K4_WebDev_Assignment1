@@ -196,12 +196,14 @@ footer{
         margin-top: 1%;
         clear: left;
         clear: right;
+        overflow: hidden;
     }
     .personal-info-active{
         background: var(--main-bg-colour);
         border: 2px solid rgb(60,60,60);
         width: 62%;
         float: left;
+        overflow: hidden;
         
     }
     
