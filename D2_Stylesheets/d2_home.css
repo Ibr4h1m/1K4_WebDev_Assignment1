@@ -33,6 +33,7 @@
     width: 90%;
     margin: auto;
     margin-top: 1%;
+    overflow: hidden;
     
 }
 .personal-info-active{
