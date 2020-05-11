@@ -43,6 +43,7 @@ header{
     background: rgb(60,60,60);
     margin: 0px;
     padding: 0px;
+    overflow: hidden;
 }
 
 header ul{
@@ -112,6 +113,7 @@ footer{
     margin: 2%;
 
 }
+
 .footer-menu ul li a{
     color: rgb(0,255,255);
     text-decoration: none;
@@ -126,7 +128,7 @@ footer{
     transition: ease-in-out 0.3s
 }
 
-@media only screen and (max-width: 720px){
+@media only screen and (max-width: 718px){
     #checkbox{
         display: block;
     }
@@ -149,6 +151,7 @@ footer{
     }
     #logo{
         position: absolute;
+        overflow:hidden;
     }
     
 }
