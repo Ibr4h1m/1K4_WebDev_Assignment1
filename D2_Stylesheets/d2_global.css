@@ -152,6 +152,7 @@ footer{
 
 @media only screen and (max-width: 718px){
     #checkbox{
+        
         display: block;
     }
     
@@ -180,12 +181,14 @@ footer{
         position: absolute;
     }
     
-        #my-image{
+    #my-image{
         border: 5px solid cyan;
         width: 30%;
         height: 30%;
         margin-bottom: 1%;
         float: right;
+        
+            
     }
     .personal-info{
         background: var(--main-bg-colour);
@@ -204,6 +207,7 @@ footer{
         width: 62%;
         float: left;
         overflow: hidden;
+        display: fixed;
         
     }
     
