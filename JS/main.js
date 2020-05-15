@@ -10,26 +10,40 @@ var vc2 = false;
 var vc3 = false;
 var vc4 = false;
 var orderTotal = 0;
-
+var dPurchased = localStorage.getItem("drinksHistory");
+if (dPurchased == "NaN"){
+    dPurchased = "0";
+}
+var drinksPurchased = parseInt(dPurchased);
+var totalDrinks = 0;
 
 function SaveOrder(){
-    var item1 = document.getElementById("basket");
-    localStorage.setItem('saveOrder', item1.innerHTML);
+    var item1 = document.getElementById("basket").innerText;
+    localStorage.setItem('saveOrder', item1);
     console.log(localStorage);
-    localstorage.setItem("price", orderTotal);
+    localStorage.setItem("price", orderTotal);
+    var addDrinks = drinksPurchased + totalDrinks;
+    localStorage.setItem("drinksHistory", addDrinks);
+    console.log(addDrinks);
 }
 
 
 function retrieveOrder(){
     var storedValue = localStorage.getItem("saveOrder");
     var oTot = localStorage.getItem("price");
-    orderTotal = oTot;
+    var dTot = localStorage.getItem("drinkHistory");
+    dTotConv = parseInt(dTot);
+    drinksPurchased = drinksPurchased + dTotConv;
+    console.log(drinksPurchased);
+    var convertedoTot = parseFloat(oTot);
+    orderTotal = orderTotal + convertedoTot;
     var basket = document.getElementById("basket");
     var addItem = document.createTextNode(storedValue);
     basket.appendChild(addItem);
     var linebreak = document.createElement('br');
     basket.appendChild(linebreak);
     isBasketEmpty = false;
+    console.log(orderTotal);
 }
 function clearFav(){
     localStorage.clear();
@@ -111,53 +125,110 @@ function AddToOrder(){
     
     
     if ((vc1 == true && vc2 == true && vc3 == true && vc4 == true)){
-            var txtSize = document.createTextNode(cupSize + " ");
-            basket.appendChild(txtSize);
+        var txtSize = document.createTextNode(cupSize + " ");
+        basket.appendChild(txtSize);
 
-            var txtName = document.createTextNode(drinkName + " ");
-            basket.appendChild(txtName);
+        var txtName = document.createTextNode(drinkName + " ");
+        basket.appendChild(txtName);
 
-            var txtXtra = document.createTextNode(xtraItem + " ");
-            basket.appendChild(txtXtra);
+        var txtXtra = document.createTextNode(xtraItem + " ");
+        basket.appendChild(txtXtra);
+
+        var txtMilk = document.createTextNode(milkType + " " + "£");
+        basket.appendChild(txtMilk);
+
+        var totalPrice = cupPrice + xtraPrice;
+        var txtPrice = document.createTextNode(totalPrice + " ");
+        basket.appendChild(txtPrice);
+
+        var linebreak = document.createElement('br');
+        basket.appendChild(linebreak);
+        orderTotal = orderTotal + totalPrice;
+        console.log(orderTotal);
+        isBasketEmpty = false;
+        totalDrinks= totalDrinks + 1;
+        console.log("Drinks in order: " + totalDrinks);
+        vc1 = false;
+        vc2 = false;
+        vc3 = false;
+        vc4 = false;
         
-            var txtMilk = document.createTextNode(milkType + " " + "£");
-            basket.appendChild(txtMilk);
-
-            var totalPrice = cupPrice + xtraPrice;
-            var txtPrice = document.createTextNode(totalPrice + " ");
-            basket.appendChild(txtPrice);
-
-            var linebreak = document.createElement('br');
-            basket.appendChild(linebreak);
-            orderTotal = orderTotal + totalPrice;
-            console.log(orderTotal);
-            isBasketEmpty = false;
         }else{
-            console.log("ERROR 4759: You've done something wrong!")
+            alert("Please select every option!")
         }
     
     
         
 }
+
 function PlaceOrder(){
+    var tot = orderTotal.toFixed(2);
     if (isBasketEmpty==false){
-        if (confirm("Your total is: £" + orderTotal + " Continue?") == true){
-            alert("Your order has been placed! Thank you");
-            var myNode = document.getElementById('basket');
-            var size = document.getElementById("size");
-            var name = document.getElementById("name");
-            var extras = document.getElementById("extras");
+        if (drinksPurchased >=10){
+            if (totalDrinks >=2){
+                tot = tot - 2.85;
+                alert("You've reached 10 loyalty points. 1 drink has been discounted");
+                if (confirm("Your total is: £" + tot + ", would you like to continue?") == true){
+                    alert("Your order has been placed! Thank you");
+                    var myNode = document.getElementById('basket');
+                    var size = document.getElementById("size");
+                    var name = document.getElementById("name");
+                    var extras = document.getElementById("extras");
+                    var addDrinks = drinksPurchased - 10;
+                    localStorage.setItem("drinksHistory", addDrinks);
+                    console.log(addDrinks);
 
-            myNode.innerHTML = '';
-            location.reload();
+                    myNode.innerHTML = '';
+                    location.reload();
 
-        } else{
-            alert("You've cancelled placing the order! Please continue");
-        }   
-    } else{
-        alert("Your basket is empty!");
+                } else{
+                    alert("You've cancelled placing the order! Please continue");
+                }                   
+            }
+            else{
+                tot = tot - 2.45
+                alert("You've reached 10 loyalty points. 1 drink has been discounted")
+                if (confirm("Your total is: £" + tot + ", would you like to continue?") == true){
+                    alert("Your order has been placed! Thank you");
+                    var myNode = document.getElementById('basket');
+                    var size = document.getElementById("size");
+                    var name = document.getElementById("name");
+                    var extras = document.getElementById("extras");
+                    var addDrinks = drinksPurchased - 10;
+                    localStorage.setItem("drinksHistory", addDrinks);
+                    console.log(addDrinks);
+
+                    myNode.innerHTML = '';
+                    location.reload();
+
+                } else{
+                    alert("You've cancelled placing the order! Please continue");
+                } 
+            }
+        }
+        else{
+            if (confirm("Your total is: £" + tot + ", would you like to continue?") == true){
+                alert("Your order has been placed! Thank you");
+                var myNode = document.getElementById('basket');
+                var size = document.getElementById("size");
+                var name = document.getElementById("name");
+                var extras = document.getElementById("extras");
+                var addDrinks = drinksPurchased + totalDrinks;
+                localStorage.setItem("drinksHistory", addDrinks);
+                console.log(addDrinks);
+
+                myNode.innerHTML = '';
+                location.reload();
+
+            } else{
+                alert("You've cancelled placing the order! Please continue");
+            }   
+        }
     }
     
+    else{
+        alert("Your basket is empty!")
+    }
     
 }
 

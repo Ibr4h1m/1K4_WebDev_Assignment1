@@ -74,3 +74,29 @@ section{
     font-weight: bold;
     color: rgb(60,60,60);
 }
+
+.skills-para{
+    width: 90%;
+    margin: auto;
+    padding: 2%;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 2%;
+}
+
+.skills-para h1{
+    color: cyan;
+    background: rgb(60,60,60);
+    border: 2px solid cyan;
+    padding: 2%;
+}
+#describePara{
+    width: 90%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background: rgb(120,120,120);
+    border: solid 2px cyan;
+    padding: 2%;
+    
+}

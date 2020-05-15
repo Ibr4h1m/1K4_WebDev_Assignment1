@@ -51,5 +51,8 @@ table tr td{
 
 }
 .btns:hover{
-    
+    background: rgb(60,60,60);
+    color: cyan;
+    border: 3px solid cyan;
+    cursor: pointer;
 }
