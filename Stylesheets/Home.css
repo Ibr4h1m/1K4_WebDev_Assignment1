@@ -13,6 +13,7 @@
     border: 5px solid cyan;
     width: 30%;
     height: 30%;
+    box-shadow: 5px 5px grey;s
 }
 
 .personal-info{
@@ -20,10 +21,11 @@
     width: 90%;
     margin: auto;
     margin-top: 1%;
-    border-radius: 30px;
+    /*border-radius: 30px;*/
     border: 2px solid rgb(60,60,60);
     padding: 1.5%;
     color: rgb(60,60,60);
+    box-shadow: 3px 3px; 
 }
     
     
@@ -36,12 +38,11 @@ h3{
     text-decoration: underline;
 }
 .experience-list{
-    text-align: left;
+    text-align: center;
     padding-left: 3%;
 }
 
 .company-name{
-    
     margin-top: 1%;
     text-transform: uppercase;
     font-style: italic;
@@ -52,11 +53,12 @@ h3{
 .responsibilities{
     margin-left: 2%;
     font-size: 14px;
+    list-style: none;
     font-weight: normal;
 }
 .job-title{
+    margin-top: 1px;
     font-style: italic;
-    text-decoration: overline
 }
 .footer-text{
     font-size: 18px;

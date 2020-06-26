@@ -24,7 +24,8 @@
     background: rgb(160,160,160);
     padding: 2%;
     border: 2px solid rgb(60,60,60);
-    overflow:hidden; 
+    overflow:hidden;
+    font-style: italic;
 }
 
 body{
@@ -60,7 +61,8 @@ header a{
     list-style: none;
     float: right;
     padding: 10px 20px 10px 10px;
-    margin: 10px 5px 10px 5px;
+    /*margin: 10px 5px 10px 5px;*/
+    margin: 7px 2px 7px 2px;
     border: 1px solid rgb(190,190,190);
 }
 
@@ -73,7 +75,7 @@ header a:hover{
 
 .page-active{
     background: rgb(100,100,100);
-    color: rgb(0,255,255)
+    color: rgb(0,255,255);
 }
 
 #checkbox{
@@ -103,7 +105,7 @@ footer{
 
 .footer-text p{
     margin-bottom: 1%;
-    color: rgb(0,255,255);
+    color: white;
     margin-top: 1%;
     margin-bottom: 1%;
 }
@@ -125,7 +127,36 @@ footer{
 .footer-menu ul li a:hover{
     background: rgb(190,190,190);
     color: rgb(60,60,60);
-    transition: ease-in-out 0.3s
+    transition: ease-in-out 0.3s;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    padding: 1%;
+    text-decoration: none;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+    text-decoration: none;
+    padding: 1%;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+    text-decoration: none;
+    padding: 1%;
+}
+
+.socials{
+    margin-top: 1%; 
+    width: 80%;
+    margin: auto;
+    padding: 1%;
 }
 
 @media only screen and (max-width: 718px){
