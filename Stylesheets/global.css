@@ -13,6 +13,10 @@
     font-family: Arial;
 }
 
+span{
+    font-weight: bold;
+    color: cyan;
+}
 .container{
     width: 100%;
     margin: auto;
@@ -29,10 +33,12 @@
 }
 
 body{
-    background: rgb(100,100,100)
+    background: url(../imgs/background-img.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 #logo{
-width: 125px;
+    width: 125px;
     height: 60px;
     float: left;
     margin: 5px 10px 5px 10%;
@@ -92,6 +98,8 @@ header a:hover{
 
 footer{
     background: rgb(60,60,60);
+    bottom: 0;
+    width: 100%;
     margin-top: 2%;
 }
 .footer-text{
