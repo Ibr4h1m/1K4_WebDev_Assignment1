@@ -13,6 +13,7 @@
     font-family: Arial;
 }
 
+
 span{
     font-weight: bold;
     color: rgb(10,250,19);
@@ -141,8 +142,11 @@ footer{
 .fa-facebook {
     background: #3B5998;
     color: white;
-    padding: 1%;
+    padding: 1.2%;
     text-decoration: none;
+    border: 2px solid black;
+    border-radius: 10px 10px;
+    
 }
 
 /* Twitter */
@@ -150,7 +154,9 @@ footer{
     background: #55ACEE;
     color: white;
     text-decoration: none;
-    padding: 1%;
+    padding: 1.2%;
+    border: 2px solid black;
+    border-radius: 10px 10px;
 }
 
 .fa-linkedin {
@@ -158,6 +164,8 @@ footer{
     color: white;
     text-decoration: none;
     padding: 1%;
+    border: 2px solid black;
+    border-radius: 10px 10px;
 }
 
 .socials{
@@ -192,12 +200,20 @@ footer{
         position: absolute;
         overflow:hidden;
     }
+    .footer-text{
+        text-align: center;
+        padding: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: capitalize;   
+        padding-bottom: 2%;
+    }
     .fa-facebook {
         background: #3B5998;
         color: white;
         padding: 1%;
         text-decoration: none;
-        margin-top: 1%;
+        margin-top: 1%
     }
 
     /* Twitter */
