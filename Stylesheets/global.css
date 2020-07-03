@@ -43,6 +43,7 @@ body{
     height: 60px;
     float: left;
     margin: 5px 10px 5px 10%;
+    overflow: hidden;
     
 }
 header{
@@ -163,7 +164,7 @@ footer{
     background: #007bb5;
     color: white;
     text-decoration: none;
-    padding: 1%;
+    padding: 1.2%;
     border: 2px solid black;
     border-radius: 10px 10px;
 }
@@ -198,7 +199,6 @@ footer{
     }
     #logo{
         position: absolute;
-        overflow:hidden;
     }
     .footer-text{
         text-align: center;

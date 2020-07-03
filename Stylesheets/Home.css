@@ -6,20 +6,22 @@
     background-size: 100%;
     margin-top: 1%;
     overflow: hidden;
-    border: 2px solid cyan;
     box-shadow: 4px 4px;
+    border: solid 2px rgb(190,190,190);
     
 }
 
 #quote{
-    color: rgb(10,250,19);
+    color: rgb(190,190,190);
     text-align: center;
     font-size: 3vw;
     margin-bottom: 1%;
+    font-style: italic;
 }
 #quote-author{
-    color: white;
+    color: cyan;
     text-align: center;
+    font-style: italic;
 
 }
 
